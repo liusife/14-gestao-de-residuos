@@ -28,7 +28,7 @@ def criar_ponto():
     novo_ponto = PontoDeColeta(id_ponto, localizacao, capacidade)
     pontos_coleta[id_ponto] = novo_ponto
     
-    print(f"\n✅ Ponto de coleta '{id_ponto}' criado com sucesso!")
+    print(f"\nPonto de coleta '{id_ponto}' criado com sucesso!")
 
 def listar_pontos():
     limpar_tela()
@@ -76,7 +76,7 @@ def deletar_ponto():
         confirmacao = input(f"Tem certeza que deseja deletar o ponto '{id_ponto}'? (s/n): ").lower()
         if confirmacao == 's':
             del pontos_coleta[id_ponto]
-            print(f"\n🗑️ Ponto de coleta '{id_ponto}' deletado com sucesso!")
+            print(f"\nPonto de coleta '{id_ponto}' deletado com sucesso!")
         else:
             print("\nOperação cancelada.")
     else:
@@ -223,7 +223,7 @@ def main():
         print("=== Sistema de Gestão de Resíduos ===")
         print("=====================================================\n")
         print("1. Gerenciar Pontos de Coleta")
-        print("2. Gerenciar Equipes de Limpeza") # AGORA FUNCIONAL
+        print("2. Gerenciar Equipes de Limpeza")
         print("0. Sair")
         
         escolha = input("\nEscolha uma opção: ")
@@ -231,7 +231,7 @@ def main():
         if escolha == '1':
             menu_pontos_coleta()
         elif escolha == '2':
-            menu_equipes_limpeza() # CHAMANDO O NOVO MENU
+            menu_equipes_limpeza()
         elif escolha == '0':
             print("\nSaindo do sistema. Dados em memória serão perdidos.")
             break
